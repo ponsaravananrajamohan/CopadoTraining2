@@ -3,12 +3,17 @@
 #
 
 *** Settings ***
-
 Library    QWeb
+
+Library    QForce
 
 *** Test Cases ***
 
 tests_flowsource_robot
-    [Documentation]    Test Case created using the QEditor
-
-    OpenBrowser    about:blank    chrome
+    [Documentation]   Test Case created using the QEditor
+    LaunchApp
+    ClickCheckbox
+    OpenBrowser       about:blank       chrome
+    GoToRecord
+    GlobalSearch
+    LaunchApp
